@@ -1,11 +1,23 @@
-# Attendance Application
-This is an application for a Lynda.com course on data-driven Angular.js Applications using FireBase.
+# Information Management Application
+This is an application using Firebase - a Real-time key-value store with a 
+RESTful interface.  In addition to Firebase, this application makes use of
+AngularJS an MVC (sometimes Angular is called MVVM, other times MVWhatever) 
+JavaScript framework.  
 
-## Instructions
-1. Make sure you have [node.js](http://nodejs.org/) and [git](http://git-scm.com/) installed on your machine.
-2. Clone this into your local machine using the terminal (mac) or Gitbash (PC) `> git clone https://github.com/planetoftheweb/attendance.git`
-3. CD to the folder `cd attendance`
-4. Run `> npm-install` to install the project dependencies
-5. Install gulp.js via the Mac terminal or Gitbash on a PC `> npm install -g gulp`
-5. Run the Gulp command `> gulp`
-6. Fire up your browser at `http://localhost:8080`
+This application keeps track of your
+contacts (name, company, address, notes, etc.).  In addition, each user can
+keep track of goals and various sub-tasks related to reaching a particular 
+goal.  This might be something similar to what people do around New Years when
+they make New Year's Resolutions.  Thirdly, this application will manage 
+projects.  For example, I have a web development company.  An important way to 
+keep up with various clients, various projects and etc. is to have a tool to 
+manage all this.  
+
+#**NOTE:** These Goals and Projects examples just listed above, are just that
+Examples.  This app lets you use the features to meet your needs.  You are not 
+forced to use both Goals and Projects, or to separate them out.  
+
+## Extra features or improvements will come about based on user feedback.
+
+Additional features to add would be a live chat application from an HTML5 web page, which will be integrated
+into the site with routing and a menu item across the top.
