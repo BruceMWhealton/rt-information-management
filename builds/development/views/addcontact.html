@@ -1,0 +1,50 @@
+<div class="meetings cf">
+  
+<div class="cf">  <h1>Add Contact</h1>
+  <form class="formgroup" 
+	   name="myform" ng-submit="addContact()" novalidate>
+       
+    <input type="text" name="firstname" placeholder="First name" ng-model="firstname" ng-required="true">
+    
+    <p class="error validationerror" ng-show="myform.contact.firstname.$invalid && myform.contact.firstname.$touched">First Name is Required</p>
+    <input type="lastname" name="lastname" placeholder="Last Name" 
+		 ng-model="lastname" ng-required="true">
+         
+    <p class="error validationerror" ng-show="myform.contact.lastname.$invalid && myform.contact.lastname.$touched">Last Name is Required</p>
+    
+    <input type="text" name="company" placeholder="Company" ng-model="company">
+     
+    
+    <input type="email" name="email" placeholder="Email" ng-model="email">
+    
+    <input type="street" name="streetAddress" placeholder="Street Address" ng-model="streetAddress">
+    
+    <input type="city" name="city" placeholder="City" ng-model="city">
+    
+    <input type="state" name="state" placeholder="State" ng-model="state">
+    
+    <input type="zipcode" name="zipcode" placeholder="Zipcode" ng-model="zipcode">
+    
+    <textarea type="tel" name="phoneNumbers" placeholder="Phone Numbers And Type (e.g. Cell, Home, Office)" ng-model="phoneNumbers"></textarea>
+    
+    <input type="category" name="category" placeholder="Category" ng-model="category">
+    
+    <label for="category">Select a Category for this Contact</label>
+    <select ng-model="category">
+    	<option value="Health Related">Health Related</option>
+        <option value="Friends">Friends</option>
+        <option value="Family">Family</option>
+        <option value="Housing">Housing</option>
+        <option value="Clients">Clients</option>
+        <option value="Vendors">Vendors</option>
+        <option value="Colleagues">Colleagues</option>
+        <option value="Contractors">Contractors</option>
+        <option value="Other">Other</option>
+    </select>
+    
+    <textarea type="text" name="notes" placeholder="Notes" ng-model="notes"></textarea>
+    
+    <button type="submit" class="btn btn-primary" ng-disabled="myform.$invalid">Add Contact</button>
+  </form></div>
+</div>
+<!--  meetingss cf-->

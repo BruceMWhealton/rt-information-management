@@ -1,0 +1,39 @@
+<section class="userpage contactspage">
+    <div class="contactslist">
+        <h1>Contacts</h1>
+        <h2><a href="#/addcontact">Add Contact</a></h2>
+        <p>Here's a list of your contacts</p>
+    
+        <div class="search cf">
+            <h2>Search Contacts</h2>
+            <input type="text" ng-model="query" placeholder="Search for People">
+
+            <div class="formgroup cf">
+                <span ng-class="label">by</span>
+                <select ng-model="order">
+                    <option value="firstname">First Name</option>
+                    <option value="lastname">Last Name</option>
+                    <option value="company">Company</option>
+                </select>
+            </div><!-- formgroup-->
+
+            <div class="formgroup cf">
+                <input id="dirascending" type="radio" ng-model="direction" name="direction">
+                <label for=dirascending>asc</label>
+                <input id="dirdecending" type="radio" ng-model="direction" name="direction" value="reverse">
+                <label for=dirdecending>desc</label> 
+            </div><!-- formgroup--> 
+
+        </div><!-- search-->
+		<div class="meeting" ng-repeat="contact in contacts | filter: query">
+      		<button class="btn btn-delete tooltip"
+		  		ng-click="deleteContact(contact.$id)"> <span>Delete this contact</span></button>
+      
+     		<a class="btn btn-list tooltip" ng-href="#/users/{{currentUser.regUser}}/{{contact.$id}}/editcontact"> <span>View or Edit Contact</span></a> 
+           <!-- <a class="btn btn-checkin tooltip" ng-href="#/checkins/{{currentUser.regUser}}/{{key}}"> <span>Go to check-in URL</span></a> -->
+            <span class="text">{{contact.firstname}} {{contact.lastname}} : {{contact.company}}</span> 
+        </div>
+        
+
+    </div>
+</section>

@@ -1,0 +1,20 @@
+<div class="meetings cf">
+	
+	<h1>Add Goal</h1>
+	<form class="formgroup addmeeting cf" 
+	   name="myform" ng-submit="addGoal()" novalidate>
+		<div class="inputwrapper">
+			<input type="text" name="goalname" placeholder="Goal name" ng-model="goalname" ng-required="true">
+		</div>	
+		<button type="submit" class="btn" ng-disabled="myform.$invalid">+</button>
+	</form>
+
+	<h2>Your goals</h2>
+	<div class="meeting" ng-repeat="(key, goal) in goals">
+		<button class="btn btn-delete tooltip"
+		  ng-click="deleteGoal(key)">
+		<span>Delete this goal</span></button>
+
+		<span class="text">{{goal.name}}</span>
+	</div><!--  meeting list-->
+</div><!--  meeting cf-->

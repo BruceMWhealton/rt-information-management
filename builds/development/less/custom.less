@@ -1,0 +1,88 @@
+//
+// Custom styles
+// --------------------------------------------------
+
+
+form.ng-invalid button.btn {
+  color: black;
+  background-color: lighten(@gray-light, 15%);
+}
+
+/* user List Styles */
+
+.userlist {
+  width: 100%;
+  margin: 0 auto;
+  opacity: .95;
+  z-index: 10;
+  margin-top: 20px;
+}
+
+.userlist ul {
+  margin: 0;
+  padding: 0;
+}
+
+.userlist li {
+  width: 50%;
+  float: left;
+  padding: 8px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.userlist li:hover {
+  background-color: @brand-secondary;
+}
+
+.userlist li.expanded {
+  width: 100%;
+  background-color: @brand-secondary;
+}
+
+.userlist li.expanded form {
+  width: 100%;
+  padding: 10px 0;
+}
+
+.userlist li.expanded form input {
+  width: 80%;
+}
+
+
+.userlist li.expanded .btn-love {
+  background-color: @brand-primary;
+}
+
+.userlist .buttons {
+  display: block;
+  float: left;
+  text-align: left;
+  margin-right: 5px;
+}
+
+.userlist .info {
+  display: block;
+  float: left;
+  text-align: left;
+}
+
+
+.userinfo {
+  text-align: center;
+  color: @brand-primary;
+  font-family: Bree Serif, serif;
+  padding-bottom: 5px;
+}
+
+.userinfo a {
+  color: darken(@brand-danger, 15%);
+}
+
+.userinfo input {
+    width: auto;
+}
